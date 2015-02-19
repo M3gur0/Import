@@ -1,0 +1,22 @@
+﻿<div>
+    <div class="jumbotron">
+        Pending tasks : {{pendingTask}}
+    </div>
+
+    <div class="row">
+        <form>
+            <div class="col-xs-12">
+                Name: <input name="Name" type="text" data-ng-model="model.Name" />
+                <br />
+                Type: <input name="Type" type="text" data-ng-model="model.Type" />
+                <br />
+                <div class="btn btn-default" ng-file-select ng-model="files">Upload using model $watch</div>
+                <br />
+                <input type="submit" class="btn btn-default" value="ok" data-ng-click="post()" />
+                <br/>
+                <progressbar max="max" value="progression"><span style="color:black; white-space:nowrap;">{{progression}} / {{max}}</span></progressbar>
+            </div>
+        </form>
+    </div>
+
+</div>
