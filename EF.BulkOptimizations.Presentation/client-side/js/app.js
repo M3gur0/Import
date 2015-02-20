@@ -1,4 +1,4 @@
-﻿var app = angular.module("importApp", ['ngRoute']);
+﻿var app = angular.module("importApp", ['ngRoute', 'angularFileUpload']);
 
 (function () {
 

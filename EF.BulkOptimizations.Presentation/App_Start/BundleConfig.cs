@@ -21,6 +21,7 @@ namespace EF.BulkOptimizations.Presentation
                 .Include("~/Scripts/modernizr-2.8.3.js")
                 .Include("~/Scripts/angular.js")
                 .Include("~/Scripts/angular-route.js")
+                .Include("~/Scripts/angular-file-upload-all.js")
                 .Include("~/client-side/js/app.js")
                 .IncludeDirectory("~/client-side/js/services", "*.js")
                 .IncludeDirectory("~/client-side/js/controllers", "*.js"));
