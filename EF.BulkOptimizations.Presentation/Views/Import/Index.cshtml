@@ -1,38 +1,47 @@
-﻿<div class="row">
-    <div class="col-xs-12 col-md-7">
-
-        <form>
-            <div class="form-group input-group">
-                <span class="input-group-addon"><i class="fa fa-file green"></i></span>
-                <input type="text" class="form-control" placeholder="Name..." data-ng-model="model.Name">
-            </div>
-
-            <div class="form-group input-group">
-                <span class="input-group-addon"><i class="fa fa-building-o green"></i></span>
-                <input type="text" class="form-control" placeholder="Type..." data-ng-model="model.Type">
-            </div>
-
-            <div class="form-group input-group">
-                <span class="input-group-btn">
-                    <span class="btn btn-file btn-primary bg-green" data-ng-file-select ng-model="file" data-updloader="uploader">Browse...</span>
-                </span>
-                <input type="text" class="form-control" readonly="" data-ng-model="model.SelectedFilename">
-            </div>
-
-            <div class="form-group">
-                <input class="btn btn-primary pull-right bg-green" type="submit" value="Upload" data-ng-click="upload()" />
-            </div>
-        </form>
-
+﻿<section class="banner description">
+    <div class="container inner">
+        <h1>{{ title }}</h1>
+        <p>Première fonctionnalité du site permettant d'importer des données au format CSV jusqu'à 1.000.000+ lignes en gardant un bon niveau de performances.<br/><i>Tech. EF6, BulkCopy, AngularJS</i></p>
     </div>
+</section>
 
-    <div class="col-xs-12 col-md-3 col-md-offset-1 bg-info">
-        <h3>Need help?</h3>
-        <p>
-            <span>Ut fusce varius nisl ac ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat.</span>
-            <span>Scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</span>
-            <span>Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue.</span>
-            <span>Cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum.</span>
-        </p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-7">
+
+            <form>
+                <div class="form-group input-group">
+                    <span class="input-group-addon"><i class="fa fa-file green"></i></span>
+                    <input type="text" class="form-control" placeholder="Name..." data-ng-model="model.Name">
+                </div>
+
+                <div class="form-group input-group">
+                    <span class="input-group-addon"><i class="fa fa-building-o green"></i></span>
+                    <input type="text" class="form-control" placeholder="Type..." data-ng-model="model.Type">
+                </div>
+
+                <div class="form-group input-group">
+                    <span class="input-group-btn">
+                        <span class="btn btn-file btn-primary bg-green" data-ng-file-select ng-model="file" data-updloader="uploader">Browse...</span>
+                    </span>
+                    <input type="text" class="form-control" readonly="" data-ng-model="model.SelectedFilename">
+                </div>
+
+                <div class="form-group">
+                    <input class="btn btn-primary pull-right bg-green" type="submit" value="Upload" data-ng-click="upload()" />
+                </div>
+            </form>
+
+        </div>
+
+        <div class="col-xs-12 col-md-3 col-md-offset-1">
+            <div class="info-zone bg-info">
+                <h3>Need help?</h3>
+                <p>
+                    <span>Ut fusce varius nisl ac ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat.</span>
+                    <span>Scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</span>
+                </p>
+            </div>
+        </div>
     </div>
 </div>

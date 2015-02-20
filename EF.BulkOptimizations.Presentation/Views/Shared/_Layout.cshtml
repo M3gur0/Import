@@ -8,20 +8,8 @@
 
     @Html.Partial("_Header")
 
-    <div class="page-container">
-        <div class="page-head">
-            <div class="container">
-                <div class="page-title">
-                    <h1 data-ng-bind="title"></h1>
-                </div>
-            </div>
-        </div>
-
-        <div class="page-content">
-            <div class="container" data-ng-view="">
-                @RenderBody()
-            </div>
-        </div>
+    <div class="main" data-ng-view="">
+        @RenderBody()
     </div>
 
     @Html.Partial("_Footer")

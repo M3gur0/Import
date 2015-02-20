@@ -5,7 +5,7 @@
         $routeProvider.when('/import', {
             templateUrl: '/import/Index',
             controller: 'importController',
-            title: 'Import'
+            title: 'import.'
         });
 
     });

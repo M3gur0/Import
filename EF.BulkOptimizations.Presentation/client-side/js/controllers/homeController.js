@@ -5,7 +5,7 @@
         var homeParamters = {
             templateUrl: '/home/dashboard',
             controller: 'homeController',
-            title: "Dashboard"
+            title: "bienvenue."
         };
 
         $routeProvider

@@ -6,7 +6,7 @@
             .when('/about', {
                 templateUrl: '/home/about',
                 controller: 'aboutController',
-                title: 'About'
+                title: 'about.'
             });
 
     });
