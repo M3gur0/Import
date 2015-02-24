@@ -2,9 +2,10 @@
 
 (function () {
 
-    app.config(['$routeProvider', function ($routeProvider) { 
+    app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) { 
 
         $(app).trigger("configureRouting", $routeProvider);
+        $locationProvider.html5Mode(true);
         
     }]);
 

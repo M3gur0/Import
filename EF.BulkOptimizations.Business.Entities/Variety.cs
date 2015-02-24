@@ -5,7 +5,7 @@
     public class Variety : IEntity
     {
         [Key]
-        public int Id { get; set; }
+        public int GeographicArea_Code { get; set; }
 
         [Required, StringLength(256)]
         public string Name { get; set; }

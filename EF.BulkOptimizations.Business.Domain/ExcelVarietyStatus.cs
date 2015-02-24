@@ -8,18 +8,16 @@
     using System.Threading.Tasks;
 
 
-    public class ExcelVarietyStatus
+    public class ExcelVarietyDetail
     {
-        public string Name { get; set; }
+        public Guid ImportTaskId { get; set; }
 
-        public string Application { get; set; }
+        public string Geographic_Area_Code { get; set; }
 
-        public string Network { get; set; }
+        public string Variety_Name { get; set; }
 
-        public string Comment { get; set; }
+        public string Local_Seller { get; set; }
 
-        public string Status { get; set; }
-
-        public int? Year { get; set; }
+        public string Value { get; set; }
     }
 }

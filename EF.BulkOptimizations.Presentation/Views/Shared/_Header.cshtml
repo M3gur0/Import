@@ -1,56 +1,73 @@
 ﻿<header>
-    <div class="page-header-top">
-        <div class="container">
-            <div class="page-logo">
-                <a href="/">
-                    <img src="~/client-side/images/logo.png" />
-                </a>
+    <div class="container">
+        <div class="yamm">
+            <div class="responsive_nav_container">
+                <a class="navbar-brand" ng-href="/#/"><img src="~/client-side/images/apple2.png" class="logo" alt=""></a>
+                <a id="navigator" class="toggle-nav btn responsive-menu pull-right hidden-print"><i class="fa fa-bars fa-2x"></i></a>
             </div>
-            <a href="javascript:;" class="menu-toggler"></a>
-            <div class="top-menu">
-                <ul class="nav navbar-nav pull-right">
-                    <li class="dropdown dropdown-extended dropdown-dark dropdown-notification" id="header_notification_bar">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <i class="fa fa-warning"></i>
-                            <span class="badge badge-default">2</span>
-                        </a>
-                    </li>
-                    <li class="droddown dropdown-separator">
-                        <span class="separator"></span>
-                    </li>
-                    <li class="dropdown dropdown-user dropdown-dark">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <img alt="" class="img-circle" src="~/client-side/images/avatar.png">
-                            <span class="username username-hide-mobile">@User.Identity.Name</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+
+            <ul class="nav navbar-nav hidden-xs hidden-print">
+                <li class="home"><a href="/" class="active">Accueil</a></li>
+                <li class="about"><a href="/about">A&nbsp;propos</a></li>
+                <li class="import"><a href="/import">Import</a></li>
+
+            </ul>
         </div>
-        <div class="page-header-menu">
+    </div>
+
+
+    @*<div class="page-header-top">
             <div class="container">
-                <form class="search-form" action="extra_search.html" method="GET">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="query">
-                        <span class="input-group-btn">
-                            <a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
-                        </span>
-                    </div>
-                </form>
-                <div class="hor-menu ">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="/#/home">home</a>
+                <div class="page-logo">
+                    <a href="/">
+                        <img src="~/client-side/images/logo.png" />
+                    </a>
+                </div>
+                <a href="javascript:;" class="menu-toggler"></a>
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown dropdown-extended dropdown-dark dropdown-notification" id="header_notification_bar">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <i class="fa fa-warning"></i>
+                                <span class="badge badge-default">2</span>
+                            </a>
                         </li>
-                        <li>
-                            <a href="/#/import">Import</a>
+                        <li class="droddown dropdown-separator">
+                            <span class="separator"></span>
                         </li>
-                        <li>
-                            <a href="/#/about">About</a>
+                        <li class="dropdown dropdown-user dropdown-dark">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <img alt="" class="img-circle" src="~/client-side/images/avatar.png">
+                                <span class="username username-hide-mobile">@User.Identity.Name</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="page-header-menu">
+                <div class="container">
+                    <form class="search-form" action="extra_search.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+                            </span>
+                        </div>
+                    </form>
+                    <div class="hor-menu ">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="/#/home">home</a>
+                            </li>
+                            <li>
+                                <a href="/#/import">Import</a>
+                            </li>
+                            <li>
+                                <a href="/#/about">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>*@
 </header>

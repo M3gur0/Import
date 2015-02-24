@@ -34,7 +34,7 @@ namespace EF.BulkOptimizations.Business.Services
             this.context.Save();
         }
 
-        public void Parse(string filePath)
+        public void Parse(string filePath, Guid importTaskId)
         {
             var connectionString = ConfigurationManager.ConnectionStrings["ExcelToSql"].ConnectionString;
             int batchSize = 1000000;
@@ -51,12 +51,11 @@ namespace EF.BulkOptimizations.Business.Services
 
             var dataTable = new DataTable("Tmp_SQLBulkCopy");
 
-            dataTable.Columns.Add(new DataColumn("Name"));
-            dataTable.Columns.Add(new DataColumn("Application"));
-            dataTable.Columns.Add(new DataColumn("Network"));
-            dataTable.Columns.Add(new DataColumn("Comment"));
-            dataTable.Columns.Add(new DataColumn("Status"));
-            dataTable.Columns.Add(new DataColumn("Year"));
+            dataTable.Columns.Add(new DataColumn("ImportTaskId"));
+            dataTable.Columns.Add(new DataColumn("Geographic_Area_Code"));
+            dataTable.Columns.Add(new DataColumn("Variety_Name"));
+            dataTable.Columns.Add(new DataColumn("Local_Seller"));
+            dataTable.Columns.Add(new DataColumn("Value"));
 
             using (var connection = new SqlConnection(connectionString))
             {
@@ -67,21 +66,24 @@ namespace EF.BulkOptimizations.Business.Services
                     DestinationTableName = "Tmp_SQLBulkCopy"
                 };
 
-                sqlBulkCopy.ColumnMappings.Add("Name", "Name");
-                sqlBulkCopy.ColumnMappings.Add("Application", "Application");
-                sqlBulkCopy.ColumnMappings.Add("Network", "Network");
-                sqlBulkCopy.ColumnMappings.Add("Comment", "Comment");
-                sqlBulkCopy.ColumnMappings.Add("Status", "Status");
-                sqlBulkCopy.ColumnMappings.Add("Year", "Year");
+                sqlBulkCopy.ColumnMappings.Add("ImportTaskId", "ImportTaskId");
+                sqlBulkCopy.ColumnMappings.Add("Geographic_Area_Code", "Geographic_Area_Code");
+                sqlBulkCopy.ColumnMappings.Add("Variety_Name", "Variety_Name");
+                sqlBulkCopy.ColumnMappings.Add("Local_Seller", "Local_Seller");
+                sqlBulkCopy.ColumnMappings.Add("Value", "Value");
 
                 while (!end)
                 {
-                    var batch = cc.Read<ExcelVarietyStatus>(filePath, inputFileDescription).Skip(page * batchSize).Take(batchSize).ToList();
+                    var batch = cc.Read<ExcelVarietyDetail>(filePath, inputFileDescription)
+                        .Skip(page * batchSize)
+                        .Take(batchSize)
+                        .ToList();
+
                     if (batch.Any())
                     {
                         batch.ForEach(item =>
                         {
-                            dataTable.Rows.Add(new Object[] { item.Name, item.Application, item.Network, item.Comment, item.Status, item.Year });
+                            dataTable.Rows.Add(new Object[] { importTaskId, item.Geographic_Area_Code, item.Variety_Name, item.Local_Seller, item.Value });
                         });
 
                         sqlBulkCopy.WriteToServer(dataTable);

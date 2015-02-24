@@ -149,7 +149,10 @@
     <Content Include="client-side\css\import.min.css">
       <DependentUpon>import.css</DependentUpon>
     </Content>
+    <Content Include="client-side\images\dry-jack-cheese-3505_640.jpg" />
     <Content Include="client-side\images\avatar.png" />
+    <Content Include="client-side\images\countryside-146807.png" />
+    <Content Include="client-side\images\countryside-146807_1280.png" />
     <Content Include="client-side\images\favicon.ico" />
     <Content Include="client-side\images\favicon.png" />
     <Content Include="client-side\images\logo.png" />

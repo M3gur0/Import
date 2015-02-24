@@ -7,9 +7,21 @@
     {
         public Guid Id { get; set; }
 
-        public string Name { get; set; }
+        public int SpeciesId { get; set; }
 
-        public string Type { get; set; }
+        public int YearId { get; set; }
+
+        public int CampaignId { get; set; }
+
+        public DateTime PublicationDate { get; set; }
+
+        public int SourceId { get; set; }
+
+        public int VariableId { get; set; }
+
+        public int UnitId { get; set; }
+
+        public string Comment { get; set; }
 
         public string OriginalFileName { get; set; }
 

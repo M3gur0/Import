@@ -40,7 +40,7 @@ namespace EF.BulkOptimizations.Business.Services
                         if (ImportServices.Tasks.TryDequeue(out task))
                         {
                             task.CurrentStatus = ImportTestStatus.Starting;
-                            new VarietyServices().Parse(task.File.FullName);
+                            new VarietyServices().Parse(task.File.FullName, task.Id);
                             task.CurrentStatus = ImportTestStatus.Success;
                         }
                     }

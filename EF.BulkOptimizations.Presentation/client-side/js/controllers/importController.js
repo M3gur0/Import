@@ -13,8 +13,13 @@
     app.controller('importController', ['$scope', '$importService', '$upload', function ($scope, $importService, $upload) {
 
         $scope.model = {
-            Name: '',
-            Type: '',
+            SpeciesId: 1,
+            YearId: 11,
+            CampaignId: 4,
+            PublicationDate: new Date(2013, 9, 22, 0,0,0,0),
+            SourceId: 1,
+            VariableId: 1,
+            UnitId : 1,
             SelectedFilename : ''
         };
 
